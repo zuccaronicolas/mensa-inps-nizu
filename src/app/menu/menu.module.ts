@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { MenuListComponent } from './menu-list.component';
 import { DishDetailComponent } from './dish-detail.component';
 import { DishDetailGuard } from './dish-detail.guard';
