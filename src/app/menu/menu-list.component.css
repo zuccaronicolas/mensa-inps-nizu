@@ -1,0 +1,26 @@
+.panel-heading {
+    background-color: #0000ff;
+    border-color: #000000;
+    color: yellow;
+    text-align-last: center;
+}
+
+.panel-primary {
+    border-color: #000000;
+    text-align-last: center;
+}
+
+.center {
+    width:120px
+}
+
+.button-style{
+    color:yellow;
+    border-color: #000000;   
+    background-color: #0000ff
+}
+
+.input-style{
+    color:#000000;
+    border-color: #000000;   
+}

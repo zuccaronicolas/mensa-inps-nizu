@@ -1,0 +1,11 @@
+.panel-heading {
+    background-color: #0000ff;
+    border-color: #000000;
+    color: yellow;
+    text-align-last: center;
+}
+
+.panel-primary {
+    border-color: #000000;
+    text-align-last: center;
+}

@@ -1,0 +1,56 @@
+[
+    {
+      "course": "Primo",
+      "name": "Carbonara",
+      "price": 6.5,
+      "imageUrl": "http://www.giallozafferano.it/images/ricette/175/17567/foto_hd/hd450x300.jpg",
+      "counter": 0,
+      "diet": "pork",
+      "id": 0
+    },
+    {
+      "course": "Primo",
+      "name": "Gricia",
+      "price": 6,
+      "imageUrl": "http://3.bp.blogspot.com/-NPso9y2fP5Q/UJLyeIkHJ0I/AAAAAAAAHwg/WtWEl1eaXSc/s1600/4068880455_91c30645fa.jpg",
+      "counter": 0,
+      "diet": "pork",
+      "id": 1
+    },
+    {
+      "course": "Secondo",
+      "name": "Bistecca",
+      "price": 12.5,
+      "imageUrl": "http://www.osteriadelporcellino.com/it/images/10bistecca-alla-fiorentina.jpg",
+      "counter": 0,
+      "diet": "fire",
+      "id": 2
+    },
+    {
+      "course": "Secondo",
+      "name": "Pollo ai ferri",
+      "price": 8.5,
+      "imageUrl": "http://www.ladolcevitasince1992.it/wp-content/uploads/rev_fissi6.jpg",
+      "counter": 0,
+      "diet": "fire",
+      "id": 3
+    },
+    {
+      "course": "Contorno",
+      "name": "Patate fritte",
+      "price": 3,
+      "imageUrl": "https://www.newsfood.com/wp-content/uploads/2015/08/come-cucinare-le-patate-fritte-big.jpg",
+      "counter": 0,
+      "diet": "vegetarian",
+      "id": 4
+    },
+    {
+      "course": "Contorno",
+      "name": "Patate al forno",
+      "price": 4,
+      "imageUrl": "http://www.lifegate.it/app/uploads/Patate-al-forno.gif",
+      "counter": 0,
+      "diet": "vegan",
+      "id": 5
+    }
+]

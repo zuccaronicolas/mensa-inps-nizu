@@ -1,0 +1,14 @@
+<!-- <div align="center">
+    Ciao io sono {{title}}!<br> Sono il tuo fantastico gestore di mensa INPS!
+</div> -->
+<!-- <app-menu-list></app-menu-list> -->
+<!-- <app-dish-detail></app-dish-detail> -->
+<nav class='navbar navbar-default'>
+    <!-- <a><img [src]='https://www.inps.it/search122/img/og-logo-inps.png' alt='image' [style.width.px]='20' /></a> -->
+    <a class='navbar-brand'>Menu INPS</a>
+    <ul class='nav navbar-nav'>
+        <li><a [routerLink]='["/welcome"]'>Home</a></li>
+        <li><a [routerLink]='["/menu"]'>Menu</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

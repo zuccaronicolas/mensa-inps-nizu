@@ -1,0 +1,56 @@
+<!-- <h1 style="color:darkgreen;" align="center">Menu List</h1> 
+<h1>Menu List</h1>/-->
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        <h1>{{panelHeading}}</h1>
+    </div>
+    <div>{{dietMessage}}</div>
+    <div>{{errorMessage}}</div>
+    <div class='panel-body' *ngIf='dishes && dishes.length'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <th> </th>
+                    <th>Portata</th>
+                    <th>Nome</th>
+                    <th>Dieta</th>
+                    <th>Prezzo</th>
+                    <th> </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let dish of dishes'>
+                        <td class='col-md-1' align='center'><img [src]='dish.imageUrl' alt='dish image' [style.width.px]='imageWidth' /></td>
+                        <td>{{dish.course | uppercase }}</td>
+                        <td><a [routerLink]='["/menu",dish.id]'>{{dish.name}}</a></td>
+                        <td>
+                            <!-- Event binding tra () per intercettare un output -->
+                            <app-diet [dietName]='dish.diet' (notifyDiet)='onNotifyDiet($event)'></app-diet>
+                        </td>
+                        <td>{{dish.price | currency : 'EUR' : true:'1.2' }}</td>
+                        <td>
+                            <!--<button class='btn btn-primary' (click)='decCounter(dish)'>-</button>
+                            <input [(ngModel)]='dish.counter' />
+                            <button class='btn btn-primary' (click)='incCounter(dish)'>+</button> -->
+                            <div class='input-group center'>
+                                <span class='input-group-btn'>
+                                    <button class="btn btn-primary button-style" (click)='decCounter(dish)'>
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                                </span>
+                                <input type="text" class="form-control input-number input-style" min="0" [(ngModel)]='dish.counter'>
+                                <span class='input-group-btn'>
+                                    <button class="btn btn-primary button-style" (click)='incCounter(dish)'>
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>Hai speso un totale di {{totPrice | currency : 'EUR' : true:'1.2' }} per {{numDish}} piatti</h1>
+            <button class='btn btn-default' (click)='reset()'>RESET</button>
+            <button class='btn btn-primary' (click)='doOrder()'>ORDER</button>
+        </div>
+    </div>
+</div>

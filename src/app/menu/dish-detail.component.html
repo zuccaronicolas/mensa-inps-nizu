@@ -1,0 +1,19 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+    <h1>DETTAGLIO PIATTO</h1>
+  </div>
+  <div class='panel-body' *ngIf='dish'>
+    <td><img [src]='dish.imageUrl' alt='dish image' [style.width.px]='imageWidth' /></td>
+    <td>
+      <p>{{dish.course}}</p>
+      <p>{{dish.price | currency : 'EUR' : true:'1.2'}}</p>
+    </td>
+    <td>
+      <app-diet [dietName]='dish.diet'></app-diet>
+      <p>{{dish.name}}</p>
+    </td>
+  </div>
+  <div class='panel-footer'>
+    <a class="btn btn-primary" (click)='onBack()'>Back</a>
+  </div>
+</div>
