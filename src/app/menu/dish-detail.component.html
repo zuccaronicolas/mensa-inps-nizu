@@ -1,19 +1,45 @@
 <div class='panel panel-primary'>
   <div class='panel-heading'>
-    <h1>DETTAGLIO PIATTO</h1>
+    <h1>{{dish.name | uppercase }}</h1>
   </div>
   <div class='panel-body' *ngIf='dish'>
-    <td><img [src]='dish.imageUrl' alt='dish image' [style.width.px]='imageWidth' /></td>
-    <td>
-      <p>{{dish.course}}</p>
-      <p>{{dish.price | currency : 'EUR' : true:'1.2'}}</p>
-    </td>
-    <td>
-      <app-diet [dietName]='dish.diet'></app-diet>
-      <p>{{dish.name}}</p>
-    </td>
+    <div class='table-responsive split2'>
+      <div class='table-responsive'>
+        <img [src]='dish.imageUrl' alt='dish large image' [style.width.px]='imageWidth' />
+      </div>
+      <div class='table-responsive splittop'>
+        <div class='table-responsive split2'>
+          <div>
+            <p class='p1'>PORTATA:</p>
+          </div>
+          <div>
+            <p class='p2'>{{dish.course | uppercase}}</p>
+          </div>
+        </div>
+        <div class='table-responsive split2'>
+          <div>
+            <p class='p1'>DIETA:</p>
+          </div>
+          <div>
+            <p class='p3'>
+              <app-diet [dietName]='dish.diet'></app-diet>
+            </p>
+          </div>
+        </div>
+        <div class='table-responsive split2'>
+          <div>
+            <p class='p1'>PREZZO:</p>
+          </div>
+          <div>
+            <p class='p2'>{{dish.price|currency:'EUR':true}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class='panel-footer'>
-    <a class="btn btn-primary" (click)='onBack()'>Back</a>
+    <a class='btn btn-default' (click)='onBack()'>
+      BACK
+    </a>
   </div>
 </div>

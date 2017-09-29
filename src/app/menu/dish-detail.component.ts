@@ -9,7 +9,7 @@ import { DishService } from './dish.service';
   styleUrls: ['./dish-detail.component.css']
 })
 export class DishDetailComponent implements OnInit {
-  imageWidth = 300
+  imageWidth = 350
   errorMessage: string;
   dish: Dish
 

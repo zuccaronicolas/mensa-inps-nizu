@@ -1,11 +1,42 @@
+div.split2 div{
+    float: left;
+    width: 50%;
+    padding: 0 2%;
+}
+
+div.splittop div{
+    float: top;
+    width: 100%;
+}
+
+.p1{
+    font-size: 25px;
+    font-weight: bold
+}
+
+.p2{
+    font-size: 25px;
+    color: blue;
+}
+
+.p3{
+    font-size: 25px;
+}
+
 .panel-heading {
-    background-color: #0000ff;
-    border-color: #000000;
-    color: yellow;
-    text-align-last: center;
+    background-color: #005781;
+    border-color:  #005781;
+    /* this is the text color */
+    color: white 
 }
 
 .panel-primary {
-    border-color: #000000;
-    text-align-last: center;
+    border-color:  #005781;
+}
+
+.btn-primary {
+    background-color: #005781;
+    border-color:  #005781;
+    /* this is the text color */
+    color: white 
 }

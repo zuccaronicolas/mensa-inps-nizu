@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Dish } from "./dish";
 import { DishService } from "./dish.service";
+import { DataPersistanceService } from "../data-persistance.service";
 
 @Component({
     selector: 'app-menu-list',
@@ -16,9 +17,16 @@ export class MenuListComponent implements OnInit {
     imageWidth = 100
     _totPrice: number = 0
     _numDish: number = 0
-    dishes: Dish[]
 
-    constructor(private _dishService: DishService) { }
+    get dishes() {
+        return this._data.dishes
+    }
+    set dishes(dishes: Dish[]) {
+        this._data.dishes = dishes
+    }
+
+    constructor(private _dishService: DishService,
+        private _data: DataPersistanceService) { }
 
     get numDish(): number {
         this._numDish = 0
@@ -64,11 +72,13 @@ export class MenuListComponent implements OnInit {
 
     ngOnInit(): void {
         console.log('OnInit')
-        this._dishService.getDishes()
-            .subscribe(
-            dishes => this.dishes = dishes,
-            error => this.errorMessage = <any>error
-            )
+        if (!this.dishes) {
+            this._dishService.getDishes()
+                .subscribe(
+                dishes => this.dishes = dishes,
+                error => this.errorMessage = <any>error
+                )
+        }
     }
 
     onNotifyDiet(message: string) {
