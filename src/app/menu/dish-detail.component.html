@@ -5,7 +5,7 @@
   <div class='panel-body' *ngIf='dish'>
     <div class='table-responsive split2'>
       <div class='table-responsive'>
-        <img [src]='dish.imageUrl' alt='dish large image' [style.width.px]='imageWidth' />
+        <img class='responsive-image' [src]='dish.imageUrl' alt='dish image'/> <!-- [style.width.px]='imageWidth' /> -->
       </div>
       <div class='table-responsive splittop'>
         <div class='table-responsive split2'>
